@@ -76,6 +76,9 @@ services:
       - HOST_PROC=/proc
       - HOST_SYS=/sys
       - HOST_ETC=/etc
+      - INFLUXDB_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
+      - INFLUXDB_ORG=${INFLUXDB_ORG:-beriopi}
+      - INFLUXDB_BUCKET=${INFLUXDB_BUCKET:-beriopi}
     networks:
       - sail
 
