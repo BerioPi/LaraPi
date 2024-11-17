@@ -27,11 +27,8 @@
         &.open {
             @apply w-[95%] justify-start rounded-lg pl-3;
         }
-
         
     }
-
-    
 
     .sidebar-hr {
         @apply bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-800 mx-2;

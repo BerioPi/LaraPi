@@ -14,7 +14,6 @@
             <x-navbar />
             <x-sidebar />
             <div class="p-5" :class="open? 'ml-64' :  'ml-16'">
-            Content
             {{ $slot }}
 
             </div>
