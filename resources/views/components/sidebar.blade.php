@@ -1,6 +1,8 @@
 <div>
-   <div class="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-white dark:bg-gray-900 shadow-lg shadow-lg">
-        <x-sidebar-icon icon="home" title="sample" />
+   <div :class="open ? 'w-64' : 'w-16'" class="sidebar">
+        <x-sidebar-icon icon="home" title="Dashboard" />
+        <hr class="sidebar-hr" />
+         <x-sidebar-icon icon="list" title="news" />
         <hr class="sidebar-hr" />
    </div>
 </div>

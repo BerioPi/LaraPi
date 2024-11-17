@@ -9,8 +9,15 @@
         @vite('resources/css/app.scss')
     </head>
     <body>
-        <x-sidebar />
-        {{ $slot }}
+        <div x-data="{open: false}">
+            <x-navbar />
+            <x-sidebar />
+            <div class="p-5" :class="open? 'ml-64' :  'ml-16'">
+            Content
+            {{ $slot }}
+
+            </div>
+        </div>
 
         @vite('resources/js/app.js')
     </body>

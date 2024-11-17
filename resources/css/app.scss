@@ -4,13 +4,34 @@
 @import "material-icons/iconfont/material-icons.css";
 
 @layer components {
-    .sidebar-icon {
-        @apply relative flex items-center justify-center h-12 w-12 my-2 mx-auto bg-gray-400 hover:bg-green-600 dark:bg-gray-800 text-green-500 hover:text-white hover:rounded-xl rounded-3xl transition-all duration-300 ease-linear cursor-pointer shadow-lg;
+    .sidebar {
+        @apply fixed top-14 left-0 h-screen m-0 flex flex-col bg-gray-800 dark:bg-gray-900 shadow-lg transition-all duration-300 ease-linear;
     }
 
-    .sidebar-tooltip {
-        @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
+    .sidebar-icon {
+        @apply relative flex items-center h-12 my-2 mx-auto bg-primary hover:bg-gray-900 text-white hover:text-sushi hover:rounded-xl rounded-3xl transition-all duration-300 ease-linear cursor-pointer shadow-lg;
+
+        .sidebar-tooltip {
+             @apply text-white bg-gray-900 text-xs font-bold p-2;
+        }
+
+        &.close {
+            @apply w-12 justify-center;
+
+            .sidebar-tooltip {
+                @apply absolute w-auto m-2 min-w-max left-14 rounded-md shadow-md transition-all duration-100 scale-0 origin-left;
+            }
+
+        }
+
+        &.open {
+            @apply w-[95%] justify-start rounded-lg pl-3;
+        }
+
+        
     }
+
+    
 
     .sidebar-hr {
         @apply bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-800 mx-2;

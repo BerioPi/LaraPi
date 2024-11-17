@@ -17,7 +17,9 @@ export default {
             },
             colors: {
                 primary: '#202225',
-                secondary: '#5865F2',
+                secondary: '#c7053d',
+                shiraz: '#c7053d',
+                sushi: '#8cc04b',
                 gray: colors.neutral,
                 gray: {
                     900: '#202225',
