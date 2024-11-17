@@ -9,7 +9,8 @@
         @vite('resources/css/app.scss')
     </head>
     <body>
-        <div x-data="{open: false}">
+        <div x-data="{ open: localStorage.getItem('sidebarOpen') === 'true' }"
+        @toggle-sidebar="open = !open; localStorage.setItem('sidebarOpen', open)">
             <x-navbar />
             <x-sidebar />
             <div class="p-5" :class="open? 'ml-64' :  'ml-16'">
