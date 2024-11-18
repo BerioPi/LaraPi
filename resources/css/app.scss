@@ -9,10 +9,10 @@
     }
 
     .sidebar-icon {
-        @apply relative flex items-center h-12 my-2 mx-auto bg-primary hover:bg-gray-900 text-white hover:text-sushi hover:rounded-xl rounded-3xl transition-all duration-300 ease-linear cursor-pointer shadow-lg;
+        @apply relative flex items-center h-12 mb-1 mx-auto bg-primary hover:bg-gray-900 text-white hover:text-sushi hover:rounded-xl rounded-3xl transition-all duration-300 ease-linear cursor-pointer shadow-lg;
 
         .sidebar-tooltip {
-             @apply text-white bg-gray-900 text-xs font-bold p-2;
+             @apply text-white bg-gray-900 text-xs font-bold p-2 ;
         }
 
         &.close {
@@ -25,12 +25,11 @@
         }
 
         &.open {
-            @apply w-[95%] justify-start rounded-lg pl-3;
-        }
-        
-    }
+            @apply w-[95%] justify-start rounded-lg pl-3 bg-gray-800;
 
-    .sidebar-hr {
-        @apply bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-800 mx-2;
+            .sidebar-tooltip {
+                @apply bg-gray-800;
+            }
+        }
     }
 }
